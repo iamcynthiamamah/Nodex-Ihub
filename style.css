@@ -1,0 +1,3356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --primary-color: #00B8FF; 
+    --secondary-color: #02073E; 
+    --gray-color: #0F213799;
+    --color-dark: #161718;
+    --color-darker:#121212;
+    --color-body: #02073E;
+    --color-white: #ffffff;
+    --color-success:#07bc0c;
+    --color-warning: #f1c40f;
+    --color-error: #e74c3c;
+    --color-light: #757575;
+    --color-btn-hover: #34aadc;
+    --light-bg:#F5FCFF;
+}
+/* h1{
+    font-size: 1.875rem;
+}
+
+h2{
+    font-size: 1.25rem;
+}
+
+h3{
+    font-size: 1.125rem;
+}
+
+p{
+    font-size: 1rem;
+} */
+a{
+    color: var(--color-white);
+    transition: 500ms;
+}
+
+a:hover{
+    color: var(--primary-color);
+}
+@font-face {
+    font-family: myFontHeavy;
+    src: url(/font/Mont-Heavy.bdb0e194\ \(1\).otf);
+}
+
+@font-face {
+    font-family: myFontSemi;
+    src: url(/font/Mont-SemiBold.6aea7eb9.otf);
+}
+
+body{
+    font-family: myFontSemi, sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.btn{
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    font-family: myFontSemi;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.btn:hover{
+    background: var(--color-btn-hover);
+    color: rgb(235, 232, 232);
+}
+
+.btn2{
+    padding: 0.7rem 2.3rem;
+    color: var(--primary-color);
+    background: white;
+    border: 1px solid var(--primary-color);
+    font-family: myFontSemi;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.btn2:hover{
+    background: var(--primary-color);
+    color: rgb(235, 232, 232);
+    
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    
+}
+
+header{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    
+}
+
+nav{
+   background: rgba(12, 12, 12, 0.192);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    }
+
+.window-scroll{
+    background:white;
+}
+
+.upper-nav{
+    padding-top: 0.4rem;
+    margin: auto;
+    margin-bottom: 0.1rem;
+    display: block;
+}
+
+.upper-nav-scroll{
+    display: none;
+}
+
+.upper-nav img{
+    width: 85px;
+
+}
+.upper-nav img:hover{
+    width: 86px;
+   
+}
+
+
+.lower-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 0.5rem 0;
+    
+}
+
+.nav-left img{
+    height: 100px;
+    height: 55px;
+}
+
+.logo-white{
+    display: block;
+}
+
+.logo-gray{
+    display: none;
+}
+
+
+
+.nav-right ul {
+   
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.mobile-top{
+    display: none;
+}
+.navScroll{
+    color:var(--secondary-color);
+    
+}
+.nav-right-mobile{
+    display: none;
+}
+
+
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;  /*will ensure it covers 100% of the screen*/
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+
+}
+
+.color-overlay{
+    background: black;
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    z-index: -51;
+    position:absolute;
+}
+
+/*-==========MAKING THE BACKGROUND VIDEO RESPONSIVE*/
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.content{
+    z-index: 5;
+    position: relative;
+    color: white;
+    top: 30%;
+}
+
+.content h1,h2{
+    font-family: myFontHeavy;
+    font-weight: 700;
+
+}
+
+.content h1{
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.content h1 span{
+    color: var(--primary-color);
+}
+
+.content h2{
+    font-size: 25px;
+}
+.content p{
+    font-family: myFontSemi;
+}
+
+.content button{
+    margin-top: 1rem;
+}
+
+
+
+/*-------------------------------------------------------- END OF HEADING---------------------------------------------------- */
+/* ====================================================TESTIMONIAL=========================================================================================================== */
+
+section.testimonial{
+    margin-top: 7rem !important;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.testimonial h1{
+    text-align: center;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    font-size: 25px;
+    color: var(--secondary-color);
+    position: relative;
+    
+}
+
+.testimonial-heading h1::before{
+    content: "";
+    height: 5px;
+    background: var(--primary-color);
+    width: 10rem;
+    position: absolute;
+    top: 2.5rem;
+        
+    
+}
+
+
+.testifier{
+   
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem ;
+    height: 50vh;
+}
+
+
+.testifier img{
+    width: 90%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.thumbnail{
+    position: relative;
+}
+
+.thumbnail button{
+    width: 100%;
+    cursor: pointer; 
+
+    min-width: 0px;
+    appearance: none;
+    display: inline-block;
+    border-radius: 4px;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 0px !important;
+}
+
+
+.thumbnail span{
+    display: inline-block;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.637);
+    z-index: 1;
+    padding: 1.8rem 2rem;
+    transform: rotate(90deg);
+    
+    
+}
+
+.thumbnail span i{
+    font-size: 42px;
+    color:white;
+    overflow: hidden;
+    z-index: 100;
+    border-radius: 50%;
+} 
+
+.cancels{
+    font-size: 3rem;
+    top: 3%;
+    right: 17%;
+    position: fixed;
+    color: white;
+    font-family: myFontSemi;
+    cursor: pointer;
+}
+.video{
+   
+    background: #1d1c1c98;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+    display: none;
+   
+}
+
+.video iframe{
+    width: 60vw;
+    height: 80vh;
+    position: fixed;
+    top: 10%;
+    right: 20%;
+    z-index: 100;
+    border: 1px solid #424242;
+    border-radius: 5px;
+    display: none;
+} 
+/* .testifier video{
+    display: none;
+} */
+
+.testimonial-bottom{
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.testimonial-bottom h1{
+    font-size: 35px;
+}
+
+.testimonial-bottom p{
+    text-align: center;
+    color: var(--gray-color);
+    font-size: 1.2rem;
+}
+
+.descriptipn{
+    padding: 2rem;
+}
+.descriptipn h2{
+    margin-bottom: 0.8rem;
+    font-family: myFontHeavy;
+    font-size: 22px;
+}
+
+.descriptipn p{
+    padding: 0 3rem;
+}
+
+/* ------------SWIPER JS */
+.swiper-button-next{
+    box-shadow: rgb(51 51 51) 0px 0px 2px 0px;
+    background: rgb(22, 22, 22);
+    padding: 1.7rem;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+}
+
+div.swiper-button-next::after{
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+
+}
+
+div.swiper-button-prev::after{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.swiper-button-prev{
+    box-shadow: rgb(51 51 51) 0px 0px 2px 0px;
+    background: rgb(22, 22, 22);
+    padding: 1.7rem;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+}
+
+
+/*-------------------------------------------------------- END OF TESTIMONIAL---------------------------------------------------- */
+
+/* ====================================================COURSES=========================================================================================================== */
+
+section.courses{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 6rem;   
+}
+
+.courses h1{
+    text-align: center;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    font-size: 30px;
+    color: var(--secondary-color);
+    position: relative; 
+    margin-bottom:4rem ;
+}
+
+.courses h1::before{
+    content: " ";
+    height: 4px;
+    width: 9.2rem;
+    color: var(--primary-color);
+    position: absolute;
+    background: var(--primary-color);
+    top: 2.5rem;
+}
+
+
+.course .swiper-content{
+    width: 350px;
+    margin: 0 auto;
+    
+    height: fit-content;
+    position: relative;
+}
+
+ .courses .swiper-button-next{
+    margin-right: -0.6rem !important ;
+}
+
+.courses .swiper-button-prev{
+    margin-left: -0.5rem;
+}
+
+.course .pics{
+    width: 340px;
+    margin: 0 auto;
+}
+.courses img{
+    width: 340px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.courses h3{
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    font-size: 22px;
+    color: var(--secondary-color); 
+    margin-bottom:1rem ;
+    line-height: 1.2;
+}
+
+.courses p{
+    margin: 0 auto;
+    font-family: myFontSemi;
+    font-size: 20px;
+    color: #06132b; 
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.course .content{
+    width: 340px;
+    height: 310px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.ribbon {
+    --f: 15px;
+    --r: 15px;
+    --t: 55px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    inset: var(--t) calc(-1*var(--f)) auto auto;
+    padding: 0 10px var(--f) calc(10px + var(--r));
+    -webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),var(--r) calc(50% - var(--f)/2));
+    clip-path: polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),var(--r) calc(50% - var(--f)/2));
+    background: #00b8ff;
+    box-shadow: 0 calc(-1*var(--f)) 0 inset rgba(0,0,0,.333);
+}
+
+/*-------------------------------------------------------- END OF COURSES---------------------------------------------------- */
+/* ====================================================JOIN OUR INTERNSHIP PROGRAM=========================================================================================================== */
+
+section.internship{
+    margin-top: 0;
+}
+
+.internship h1{
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.internship h1::before{
+    height: 4px;
+    content: "";
+    background: var(--primary-color);
+    width: 11.2rem;
+    top: 2.5rem;
+    position: absolute;
+    
+}
+
+.intern{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.internship-content p{
+    color:var(--secondary-color);
+    line-height: 1.5;
+    font-family: myFontSemi;
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    
+}
+
+.internship-content h2{
+    color: var(--secondary-color);
+    font-family: myFontHeavy;
+    font-size: 26.5px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+}
+
+.internship-content h2::before{
+    content: "";
+    background: #ACE8FF;
+    width: 14rem;
+    height: 1.6rem;
+    position: absolute;
+    z-index: -1;
+    top: 2.7rem;
+    left: 13.9rem;
+}
+/*-------------------------------------------------------- END OF INTERNSHIP---------------------------------------------------- */
+
+
+/* ====================================================NODEX KIT=========================================================================================================== */
+section.nodex-kit{
+    margin-top: 0;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+
+.nodex-kit h1{
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.nodex-kit h1::before{
+    height: 4px;
+    content: "";
+    background: var(--primary-color);
+    width: 11.2rem;
+    top: 2.5rem;
+    position: absolute;
+    
+}
+
+.kit{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.kit-content p{
+    color:var(--secondary-color);
+    line-height: 1.5;
+    font-family: myFontSemi;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.kit-content h2{
+    color: var(--secondary-color);
+    font-family: myFontHeavy;
+    font-size: 26.5px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.kit-content h2::before{
+    content: "";
+    background: #ACE8FF;
+    width: 18rem;
+    height: 1.6rem;
+    position: absolute;
+    z-index: -1;
+    top: -0.4rem;
+
+}
+
+/*-------------------------------------------------------- END OF NODEX KIT---------------------------------------------------- */
+
+/* ====================================================WHO IS THIS KIT FOR=========================================================================================================== */
+
+section.who{
+    margin-top: 0;
+    margin-top: 5rem;
+    background: var(--light-bg);
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.who h1{
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.who .numbers{
+    width: 60%;
+}
+.who .numbers hr{
+    width: 100%;
+    height: 0.1rem;
+    background: var(--primary-color);
+}
+.who .number{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.who span{
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+    font-family: myFontSemi;
+    font-size: 0.6rem;
+    position: absolute;
+    top: -0.9rem;
+}
+
+.who .sub-heading .four{
+    display: none;
+}
+.who .sub-heading{
+    display: flex;
+    width:75% ;
+    justify-content: space-between;
+    
+   
+}
+
+.who .sub-heading >div{
+    width: 190px;
+    text-align: center;
+}
+
+.who .sub-heading p{
+    color: var(--secondary-color);
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+
+/*-------------------------------------------------------- END OF WHO IS THIS KIT FOR---------------------------------------------------- */
+
+/* ====================================================WHAT THE KIT CONTAIN=========================================================================================================== */
+
+section.contains{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contains h4{
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contain {
+    width: 100%;
+    color: var(--secondary-color);
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contains .bt{
+    width: 100%;
+    text-align: center;
+}
+
+.contains button{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    
+}
+
+/*-------------------------------------------------------- END OF WHAT THE KIT CONTAINS---------------------------------------------------- */
+
+
+/* ====================================================WHAT OUR STUDENTS ARE SAYING=========================================================================================================== */
+section.saying{
+    width: 100%;
+    margin: auto;
+    margin-top: 2rem; 
+}
+
+.saying h1{
+    text-align: center;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    font-size: 30px;
+    color: var(--secondary-color);
+    position: relative; 
+    margin-bottom:2rem ;
+}
+
+.saying h1::before{
+    content: " ";
+    height: 4px;
+    width: 12rem;
+    color: var(--primary-color);
+    position: absolute;
+    background: var(--primary-color);
+    top: 2.5rem;
+}
+
+.says{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+    align-items: center;
+    padding: 85px 0px;
+    flex-direction: row;
+    align-items: center;
+
+    
+}
+
+.say{
+    min-width: 0;
+    margin: 0;
+    display: inline-block;
+    transition: all 300ms ease;
+    padding:10px  30px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 370px;
+    position: relative; 
+    cursor: pointer;
+    height: fit-content;
+    transition: all 200ms ease-in-out;
+   
+    
+}
+
+
+.say img{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: absolute;
+    left: 38%;
+    top: -3rem;
+   
+    
+}
+
+
+.say h6{
+    font-family: myFontHeavy;
+    font-size: 22px;
+    color: var(--secondary-color);
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+.say p{
+    display: block;
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 0;
+    font-family: myFontSemi;
+    color: var(--secondary-color);
+    font-size: 18px;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.6;
+ 
+}
+
+
+
+ .say.active{
+    border: 3px solid var(--primary-color);
+    width: 100%;
+    position: relative;
+    transform: scale(1.3);
+    max-width: 375px;
+    /* transition: all .2s ease-in-out; */
+
+}
+
+.saying .circle{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.circle .cycle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.saying .circle  span{
+    padding: 0rem 10px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.saying .circle  span.active{
+    padding: 0.6rem 1.3rem;
+    background: var(--primary-color);
+}
+
+
+/*-------------------------------------------------------- END OF WHAT OUR STUDENTS ARE SAYING---------------------------------------------------- */
+
+
+/* ====================================================BUILD WITH NODEX=========================================================================================================== */
+section.build{
+    margin-top: 0;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.build-heaading h1{
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.build-heaading h1::before{
+    height: 4px;
+    content: "";
+    background: var(--primary-color);
+    width: 11.2rem;
+    top: 2.5rem;
+    position: absolute;
+    
+}
+
+.builds{
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+
+/* 
+THIS KEYFRAME AND ANIMATION BELOW WASNT USED used a libraray AOS instead animate on scroll by michalsnik
+@keyframes zoom {
+   from {
+        transform: scale(0.7,0.7);
+   }
+   to {
+        transform: scale(1.1,1.1);
+   }
+}
+
+.building-animation{
+    animation: zoom 1200ms;
+} */
+.building img{ 
+    width: 100%;
+    margin: 0 auto;
+    height: 450px;
+    border-radius: 10px;
+}
+
+
+.building-content{
+    padding: 0 1rem;
+}
+
+.building-content p{
+    color:var(--secondary-color);
+    line-height: 1.3;
+    font-family: myFontSemi;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1.2rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.building-content h2{
+    padding: 1rem 0;
+    margin-top: 2rem;
+    color: var(--secondary-color);
+    font-family: myFontHeavy;
+    font-size: 28px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.building-content h2::before{
+    content: "";
+    background: #ACE8FF;
+    width: 18rem;
+    height: 1.7rem;
+    position: absolute;
+    z-index: -1;
+    top: 2.6rem;
+    left: 38%;
+
+}
+
+.bt{
+    text-align: center;
+}
+
+/*-------------------------------------------------------- END OF BUILD WITH NODEX---------------------------------------------------- */
+
+
+/* ====================================================MAP LOCATION=========================================================================================================== */
+section.map{
+    margin-top: 0;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.map-heaading h1{
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0 auto;
+    font-family: myFontHeavy;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.map-heaading h1::before{
+    height: 4px;
+    content: "";
+    background: var(--primary-color);
+    width: 11.2rem;
+    top: 2.5rem;
+    position: absolute;
+    
+}
+
+.map .mapping{
+    width: 95%;
+    margin: 0 auto;
+}
+.map .mapping iframe{
+    height: 450px;
+    width: 100%;
+    margin-bottom: 3rem;
+    
+}
+
+/*-------------------------------------------------------- END OF ---------------------------------------------------- */
+/* ====================================================FOOTER=========================================================================================================== */
+footer{
+    background: var(--primary-color);
+    color: white;
+}
+
+footer h2{
+    font-family: myFontHeavy;
+}
+
+footer{
+    font-family: myFontSemi;
+}
+
+.foot{
+    width: 100%;
+    margin: 0 auto;
+}
+.foot1{
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+    padding-top: 4rem;
+}
+
+.contact, .email, .address{
+    width: 33%;
+}
+
+.office{
+    width: 100%;
+}
+
+.foot1 a{
+    font-size: 18px;
+}
+
+.foot1 a:hover{
+    font-family: myFontHeavy;
+    color: white;
+}
+.foot1>div{
+    min-width: 0;
+    max-width: 350px;
+}
+
+.foot1 h2{
+    font-size: 1.25rem;
+    font-family: myFontHeavy;
+    margin-bottom: 1rem;
+}
+
+.foot1{
+    font-family: myFontSemi;
+}
+
+footer hr{
+    margin:  0 auto;
+    height: 1.5px;
+    background: white;
+    opacity: 0.5;
+    margin: 2rem 0;
+}
+
+.foots{
+    width: 95%;
+    margin: 0 auto;
+}
+.foots hr{
+    margin:  0 auto;
+    height: 1.5px;
+    background: white;
+    opacity: 0.5;
+    margin: 2rem 0;
+}
+.foot2{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.newsletter{
+    width: 50%;
+}
+
+.our-platform, .our-services, .about-us{
+    width: 16.66%;
+    text-align: center;
+}
+.our-platform p, .our-services p, .about-us p{
+    margin-bottom: 1rem;
+    color: rgb(238, 234, 234);
+}
+.foot2 h1{
+    font-family: myFontHeavy;
+    margin-bottom: 0.5rem;
+}
+
+.foot2 h2{
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-family: myFontHeavy;
+}
+
+.newsletter p{
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    font-family: myFontSemi;
+}
+.newsletter .inputs{
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.newsletter input{
+    padding: 1rem;
+    width: 75%;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    cursor: pointer;
+}
+
+.newsletter .socials{
+    font-size: 1.5rem;
+}
+
+.newsletter button{
+    background: black;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-family: myFontSemi;
+    border-left: 0;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+
+.foot3{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 18px;
+}
+
+
+/*-------------------------------------------------------- END OF FOOTER---------------------------------------------------- */
+
+
+
+/*##################################====== MEDIA QUERIES ====################################################################################################################################################################   */
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 1024PX ========================================================================================================= */
+@media screen and (max-width: 1024px) {
+   
+    .container{ 
+        width: 90%;
+        overflow: hidden;
+    }
+
+
+    /* =========TESTIMONIAL================ */
+
+.video iframe{
+        display: none;
+        width: 89vw;
+        height: 70vh;
+        position: fixed;
+        top: 15%;
+        right: 6%;   
+    }
+
+.cancels{
+        font-size: 3rem;
+        top: 8%;
+        right: 4%;
+        position: fixed;
+        color: white;
+        font-family: myFontSemi;
+        cursor: pointer;
+    }
+
+section.testimonial{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 7rem;
+    position: relative;
+}
+
+.testimonial-bottom h1{
+    font-size: 35px;
+}
+
+.testimonial-bottom p{
+    text-align: center;
+    color: var(--gray-color);
+    font-size: 1.2rem;
+}
+
+.descriptipn h2{
+    margin-bottom: 1.2rem;
+    font-family: myFontHeavy;
+    font-size: 23px;
+}
+
+/*--------- END OF TESTIMONIAL------------- */
+
+/* COURSES */
+.courses h1{
+    font-size: 28px;
+}
+
+/* =========JOIN OUR INTERNSHIP PROGRAM========== */
+
+.internship h1{
+    color: var(--secondary-color);
+    font-size: 28px;
+}
+
+.internship-content p{
+    font-size: 17px;
+    padding: 0 1rem;
+}
+
+.internship-content h2{
+    font-size: 26px; 
+    line-height: 1.25;
+    padding: 0 1rem;
+}
+
+.internship-content h2::before{
+    width: 12rem;
+    top: 4.7rem;
+    left: 11.9rem;
+    padding: 0 1rem;
+}
+
+/*-------------- END OF INTERNSHIP--------------*/
+
+/* ===============NODEX KIT================== */
+section.nodex-kit{
+    margin-top: 5rem;
+}
+
+.nodex-kit h1{
+    font-size: 28px;
+    margin-bottom: 3rem;
+}
+
+.kit-content p{
+    font-size: 17px;
+    padding: 0 1rem;
+    
+}
+
+.kit-content h2{
+    padding: 0 1rem;
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 1.8rem;
+}
+
+.kit-content h2::before{
+    height: 1.3rem;
+    top: -0.1rem;
+
+}
+
+/*---------------- END OF NODEX KIT---------- */
+
+/* =================WHO IS THIS KIT FOR========== */
+
+section.who{
+    margin-bottom: 3rem;   
+}
+
+.who h1{
+    font-size: 28px;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.who .sub-heading .four{
+    display: none;
+}
+
+.who .numbers{
+    width: 70%;
+    padding-right: 3rem;
+}
+.who .numbers hr{
+    margin-top: 2rem;
+}
+.who .number{
+    margin-bottom: 2.5rem;
+}
+
+.who .sub-heading{
+    width:85% ; 
+}
+
+.who .sub-heading p{
+    font-size: 17px;
+}
+
+/*--------------- END OF WHO IS THIS KIT FOR-------- */
+
+/* ===============WHAT THE KIT CONTAIN=============== */
+
+.contains h4{
+    color: var(--secondary-color);
+    font-size: 17px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contain {
+    width: 100%;
+    color: var(--secondary-color);
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.45;
+    margin-bottom: 3rem;
+}
+
+/*--------------- END OF WHAT THE KIT CONTAINS-------- */
+
+
+/* ===============WHAT OUR STUDENTS ARE SAYING=============== */
+    section.saying{
+        margin-top: 2rem; 
+    }
+    
+    .saying h1{
+        font-size: 28px;
+        margin-bottom:4rem ;
+    }
+    
+    
+    .says{
+        display: flex;
+        row-gap: 10rem;
+        padding: 85px 0px;
+        flex-direction: column;  
+    }
+    
+    .say{
+        min-width: 0;
+        margin: 0;
+        transition: all 300ms ease;
+        max-width: 370px;
+        transition: all 200ms ease-in-out;  
+    }
+    
+    
+    .say h6{
+        font-size: 22px;
+    }
+    
+    .say p{
+        font-size: 17px;
+        line-height: 1.6;
+    }
+    
+    
+    
+     .say.active{
+        transform: scale(1.3);
+        max-width: 375px;
+    }
+    
+    .saying .circle{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .saying .circle  span.active{
+        padding: 0.35rem 1rem;
+        background: var(--primary-color);
+    }
+    
+    /*----- END OF WHAT OUR STUDENTS ARE SAYING----------- */
+    
+    
+    /* =========BUILD WITH NODEX======================= */
+    section.build{
+        margin-top: 4rem;
+    }
+    
+    .build-heaading h1{
+        color: var(--secondary-color);
+        font-size: 28px;
+    }
+
+    
+    .builds{
+        width: 75%;
+        margin: 0 auto; 
+    }
+    
+    
+    .building img{ 
+        width: 100%;
+        height: 450px;
+        margin-bottom: -1rem;
+    }
+    
+    
+    .building-content{
+        padding: 0 1rem;
+    }
+    
+    .building-content p{
+        margin-top: -1rem;
+        line-height: 1.3;
+        font-size: 17px;
+        padding: 0 4rem;
+        margin-bottom: 2rem;
+        
+    }
+    
+    .building-content h2{
+        padding: 1rem 0;
+        margin-top: 2rem;
+        font-size: 25px;
+    }
+    
+    .building-content h2::before{
+        width: 17rem;
+        height: 1.3rem;
+        top: 3.4rem;
+        left: 39%;
+    
+    }
+
+
+
+
+    /* =========FOOTER======================= */
+    .foot2{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .newsletter{
+        width: 50%;
+        padding-right: 1rem;
+    }
+    
+    .our-platform p, .our-services p, .about-us p{
+        margin-bottom: 1rem;
+        color: rgb(238, 234, 234);
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 900PX ========================================================================================================= */
+@media screen and (max-width: 900px) {
+   
+    .container{ 
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .content h1{
+        margin-top:5rem;
+    }
+
+    .content button{
+        margin-top: 2rem;
+    }
+
+    .nav-right{
+        display: none;
+        background: white;
+        width: 40vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .nav-right ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 400;
+        padding: 0 2rem;
+    }
+    
+    .nav-right ul a{
+        color: black;
+    }
+    
+    .nav-right ul button{
+        align-self: center;
+        position:absolute;
+        bottom: 2rem;
+    }
+    
+    .mobile-top{
+        overflow: hidden;
+        width: 34vw;
+        height: 5rem;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    
+    .logo-gray-mobile{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .cancel{
+        font-size: 2rem;
+    }
+    
+    .nav-right-mobile{
+        display: block;
+        font-size: 2rem;
+        color: var(--color-light);
+        font-style: myFontHeavy;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .nav-left img{
+        height: 100px;
+        height: 35px;
+    }
+
+   /* =========TESTIMONIAL================ */
+
+
+   .video iframe{
+    display: none;
+    width: 90vw;
+    height: 60vh;
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    z-index: 100;
+    border: 1px solid #424242;
+}
+
+.cancels{
+    font-size: 3rem;
+    top: 13%;
+    right: 3%;
+    position: fixed;
+    color: white;
+    font-family: myFontSemi;
+    cursor: pointer;
+}
+
+   section.testimonial{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 7rem;
+    position: relative;
+}
+
+.testimonial h1{
+    font-size: 26px;
+}
+
+.testifier{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    padding: 1rem 0 ;
+    height: 50vh;
+}
+
+
+
+.thumbnail span{
+    padding: 1rem 1rem;
+    transform: rotate(90deg);
+}
+
+.thumbnail span i{
+    font-size: 30px;
+} 
+
+.testimonial-bottom{
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.testimonial-bottom h1{
+    font-size: 30px;
+}
+
+.testimonial-bottom p{
+    text-align: center;
+    color: var(--gray-color);
+    font-size: 16px;
+}
+
+.descriptipn{
+    padding: 0 2rem;
+    padding-left: 5rem;
+}
+.descriptipn h2{
+    font-size: 20px;
+}
+
+.descriptipn p{
+    padding: 0 3rem;
+    font-size: 15px;
+}
+
+/*--------- END OF TESTIMONIAL------------- */
+
+/* COURSES */
+.courses h1{
+    font-size: 26px;
+}
+
+.courses h3{
+    font-size: 20px;
+}
+
+.courses p{
+    font-size: 18px;
+}
+
+/* =========JOIN OUR INTERNSHIP PROGRAM========== */
+
+.internship h1{
+    color: var(--secondary-color);
+    font-size: 26px;
+}
+
+.internship-content p{
+    font-size: 16.5px;
+    padding: 0 0rem;
+    padding-right: 0.5rem;
+}
+
+.internship-content h2{
+    font-size: 25px; 
+    line-height: 1.2;
+    padding: 0 0rem;
+    padding-right: 0.5rem;
+}
+
+.internship-content h2::before{
+    width: 12rem;
+    top: 4.6rem;
+    left: 10.1rem;
+    padding: 0 1rem;
+}
+
+/*-------------- END OF INTERNSHIP--------------*/
+
+/* ===============NODEX KIT================== */
+section.nodex-kit{
+    margin-top: 3rem;
+}
+
+.nodex-kit h1{
+    font-size: 26px;
+    margin-bottom: 3rem;
+}
+
+.kit-content p{
+    font-size: 17px;
+    padding: 0 0rem;
+    
+}
+
+.kit-content h2{
+    padding: 0 0rem;
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 1.8rem;
+}
+
+.kit-content h2::before{
+    height: 1.3rem;
+    top: -0.1rem;
+
+}
+
+/*---------------- END OF NODEX KIT---------- */
+
+/* =================WHO IS THIS KIT FOR========== */
+
+section.who{
+    margin-bottom: 3rem;   
+    margin-top: 4rem;
+}
+
+.who h1{
+    font-size: 26px;
+    padding-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.who .sub-heading .four{
+    display: none;
+}
+
+.who .numbers{
+    width: 70%;
+    padding-right: 3rem;
+}
+.who .numbers hr{
+    margin-top: 2rem;
+}
+.who .number{
+    margin-bottom: 2.5rem;
+}
+
+.who .sub-heading{
+    width:85% ; 
+}
+
+.who .sub-heading p{
+    font-size: 16px;
+}
+
+/*--------------- END OF WHO IS THIS KIT FOR-------- */
+
+/* ===============WHAT THE KIT CONTAIN=============== */
+
+.contains h4{
+    color: var(--secondary-color);
+    font-size: 17px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contain {
+    width: 100%;
+    color: var(--secondary-color);
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.45;
+    margin-bottom: 3rem;
+}
+
+/*--------------- END OF WHAT THE KIT CONTAINS-------- */
+
+
+/* ===============WHAT OUR STUDENTS ARE SAYING=============== */
+    section.saying{
+        margin-top: 2rem; 
+    }
+    
+    .saying h1{
+        font-size: 26px;
+        margin-bottom:4rem ;
+    }
+    
+    
+    .says{
+        display: flex;
+        row-gap: 7rem;
+        padding: 75px 0px;
+        flex-direction: column;  
+    }
+    
+    .say{
+        min-width: 0;
+        margin: 0;
+        transition: all 300ms ease;
+        max-width: 370px;
+        transition: all 200ms ease-in-out;  
+    }
+    
+    
+    .say h6{
+        font-size: 20px;
+    }
+    
+    .say p{
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    
+    
+     .say.active{
+        transform: scale(1.3);
+        max-width: 375px;
+    }
+    
+    .saying .circle{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .saying .circle  span.active{
+        padding: 0.35rem 1rem;
+        background: var(--primary-color);
+    }
+    
+    /*----- END OF WHAT OUR STUDENTS ARE SAYING----------- */
+    
+    
+    /* =========BUILD WITH NODEX======================= */
+    section.build{
+        margin-top: 4rem;
+    }
+    
+    .build-heaading h1{
+        color: var(--secondary-color);
+        font-size: 26px;
+    }
+
+    .build-heaading h1::before{
+        width: 9rem;
+    }
+    
+    .builds{
+        width: 85%;
+        margin: 0 auto; 
+    }
+    
+    
+    .building img{ 
+        width: 100%;
+        height: 450px;
+        margin-bottom: -1rem;
+    }
+    
+    
+    .building-content{
+        padding: 0 1rem;
+    }
+    
+    .building-content p{
+        margin-top: -1rem;
+        line-height: 1.3;
+        font-size: 17px;
+        padding: 0 4rem;
+        margin-bottom: 2rem;
+        
+    }
+    
+    .building-content h2{
+        padding: 1rem 0;
+        margin-top: 2rem;
+        font-size: 25px;
+    }
+    
+    .building-content h2::before{
+        width: 17rem;
+        height: 1.3rem;
+        top: 3.4rem;
+        left: 39%;
+    
+    }
+
+
+    /* =========FOOTER======================= */
+    
+    .foot1{
+        width: 100%;
+        row-gap: 3rem;
+    }
+
+    .foot1 .contact{
+        margin-right: 3rem;
+    }
+
+    .foot1 .contact p{
+        font-size: 13px;
+    }
+
+    .foot1{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        row-gap: 30px;
+        padding-top: 4rem;
+    }
+    .foot1 .email{
+        margin-right: 4rem;
+    }
+    .foot2{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .newsletter{
+        min-width: 100%;
+        padding-right: 1rem;
+    }
+    
+    .newsletter h1{
+        font-size: 26px;
+    }
+    .our-platform, .our-services, .about-us{
+        min-width: 33.33%;
+    }
+
+    .our-platform p, .our-services p, .about-us p{
+        margin-bottom: 1rem;
+        color: rgb(238, 234, 234);
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 769PX ========================================================================================================= */
+@media screen and (max-width: 767px) {
+
+header .content h1{
+    font-size: 50px;
+    margin-top: 3rem;
+}
+
+header .content h2{
+    font-size: 25px;
+}
+
+.nav-right{
+    display: none;
+    background: white;
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav-right ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 0 2rem;
+}
+
+.nav-right ul a{
+    color: black;
+}
+
+.nav-right ul button{
+    align-self: center;
+    position:absolute;
+    bottom: 2rem;
+}
+
+.mobile-top{
+    overflow: hidden;
+    width: 34vw;
+    height: 5rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.logo-gray-mobile{
+    height: 100px;
+    width: 100px;
+}
+
+.cancel{
+    font-size: 2rem;
+}
+
+.nav-right-mobile{
+    display: block;
+    font-size: 2rem;
+    color: var(--color-light);
+    font-style: myFontHeavy;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-left img{
+    height: 100px;
+    height: 35px;
+}
+
+
+/* =========TESTIMONIAL================ */
+
+    section.testimonial{
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 7rem;
+        position: relative;
+    }
+
+    .testimonial h1{
+        font-size: 25px;
+    }
+    
+    .testifier{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 0rem;
+        padding: 1rem 0 ;
+        height: 50vh;
+    }
+    
+    
+    
+    .thumbnail span{
+        padding: 1rem 1rem;
+        transform: rotate(90deg);
+    }
+    
+    .thumbnail span i{
+        font-size: 30px;
+    } 
+    
+    .testimonial-bottom{
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    
+    .testimonial-bottom h1{
+        font-size: 26px;
+    }
+    
+    .testimonial-bottom p{
+        text-align: center;
+        color: var(--gray-color);
+        font-size: 15px;
+    }
+    
+    .descriptipn{
+        padding: 0 2rem;
+        padding-left: 5rem;
+    }
+    .descriptipn h2{
+        font-size: 20px;
+    }
+    
+    .descriptipn p{
+        padding: 0 3rem;
+        font-size: 15px;
+    }
+    
+/*--------- END OF TESTIMONIAL------------- */
+
+/* ===============COURSES========================= */
+
+.courses h1{
+    font-size: 20px;
+}
+
+.courses h3{
+    font-size: 18px;
+}
+
+.courses p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/*--------------- END OF COURSES---------------- */
+
+
+/* =========JOIN OUR INTERNSHIP PROGRAM========== */
+
+section.internship{
+    margin-top: -7rem;
+}
+
+.internship h1{
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+.internship h1::before{
+    width: 9rem;
+}
+
+.intern{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.intern img{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.internship-content p{
+    text-align: unset;
+    font-size: 16px;
+    padding: 0 0rem;
+}
+
+.internship-content h2{
+    font-size: 20px; 
+    line-height: 1.25;
+    padding: 0 0rem;
+    text-align: unset;
+}
+
+.internship-content h2::before{
+    content: "";
+    background: #ACE8FF;
+    width: 12.5rem;
+    height: 2.6rem;
+    position: absolute;
+    z-index: -1;
+    top: 2rem;
+    left: 3rem;
+}
+/*-------------- END OF INTERNSHIP--------------*/
+
+/* ===============NODEX KIT================== */
+
+section.nodex-kit{
+    margin-top: 4rem;
+}
+
+.nodex-kit h1{
+    font-size: 20px;
+    margin-bottom: 3rem;
+}
+
+.nodex-kit h1::before{
+    width: 9rem;
+}
+
+.kit{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+.kit-content p{
+    font-size: 16px;
+    padding: 0 0rem;
+    text-align: unset;
+    
+}
+
+.kit-content h2{
+    text-align: unset;
+    padding: 0 0rem;
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+}
+
+
+.kit-content h2::before{
+    content: "";
+    background: #ACE8FF;
+    width: 18rem;
+    height: 1.2rem;
+    position: absolute;
+    z-index: -1;
+    top: -0.4rem;
+
+}
+
+/*---------------- END OF NODEX KIT---------- */
+
+/* =================WHO IS THIS KIT FOR========== */
+
+
+section.who{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.who h1{
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+    padding-top: 2rem;
+}
+
+.who .numbers{
+    width: 68%;
+}
+
+.who .sub-heading{
+    width:85% ;
+}
+
+.who .sub-heading >div{
+    width: 170px;
+    text-align: center;
+}
+
+.who .sub-heading p{
+    font-size: 16px;
+}
+
+
+/* ===============WHAT THE KIT CONTAIN=============== */
+
+.contains h4{
+    font-size: 16px;
+}
+
+.contain {
+    font-size: 16px;
+}
+
+.bt button{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*--------------- END OF WHAT THE KIT CONTAINS-------- */
+
+
+/* ===============WHAT OUR STUDENTS ARE SAYING=============== */
+    section.saying{
+        margin-top: 2rem; 
+    }
+    
+    .saying h1{
+        font-size: 20px;
+        margin-bottom:4rem ;
+    }
+    
+    .saying h1::before{
+        width: 9rem;
+    }
+    
+    .says{
+        display: flex;
+        row-gap: 8rem;
+        padding: 70px 0px;
+        flex-direction: column;  
+    }
+    
+    .say{
+        min-width: 0;
+        margin: 0;
+        transition: all 300ms ease;
+        max-width: 370px;
+        transition: all 200ms ease-in-out;  
+    }
+    
+    
+    .say h6{
+        font-size: 20px;
+    }
+    
+    .say p{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    
+    
+     .say.active{
+        transform: scale(1.25);
+        max-width: 375px;
+    }
+    
+    .saying .circle{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .saying .circle  span.active{
+        padding: 0.35rem 1rem;
+        background: var(--primary-color);
+    }
+    
+    /*----- END OF WHAT OUR STUDENTS ARE SAYING----------- */
+    
+    
+    /* =========BUILD WITH NODEX======================= */
+    section.build{
+        margin-top: 4rem;
+    }
+    
+    .build-heaading h1{
+        color: var(--secondary-color);
+        font-size: 20px;
+    }
+
+    .build-heaading h1::before{
+        width: 7rem;
+    }
+
+    
+    .builds{
+        width: 90%;
+        margin: 0 auto; 
+    }
+    
+    
+    .building img{ 
+        width: 100%;
+        height: 450px;
+        margin-bottom: -1rem;
+    }
+    
+    
+    .building-content{
+        padding: 0 1rem;
+    }
+    
+    .building-content p{
+        margin-top: -1rem;
+        line-height: 1.3;
+        font-size: 16px;
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+        
+    }
+    
+    .building-content h2{
+        padding: 1rem 0rem;
+        margin-top: 2rem;
+        font-size: 22px;
+    }
+    
+    .building-content h2::before{
+        width: 17rem;
+        height: 1.3rem;
+        top: 3.4rem;
+        left: 39%;
+        padding:  0 0rem;
+    
+    }
+
+    /* ======================MAP================ */
+    .map h1{
+        font-size: 20px;
+    }
+
+    .map h1::before{
+        width: 9rem;
+    }
+    /* =========FOOTER======================= */
+    
+    .foot1{
+        width: 100%;
+        row-gap: 3rem;
+    }
+
+    .foot1 .contact{
+        margin-right: 3rem;
+    }
+
+    .foot1 .contact p{
+        font-size: 13px;
+    }
+
+    .foot1{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        row-gap: 30px;
+        padding-top: 4rem;
+    }
+    .foot1 .email{
+        margin-right: 4rem;
+    }
+    .foot2{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+        padding-right: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newsletter .inputs{
+        width: 100%;
+        margin-left: 25px;
+    }
+
+    .newsletter .socials{
+        margin-top: -1rem;
+    }
+    
+    .newsletter h1{
+        font-size: 26px;
+    }
+    .our-platform, .our-services, .about-us{
+        min-width: 100%;
+        margin-bottom: 0rem;
+    }
+
+    .our-platform p, .our-services p, .about-us p{
+        margin-bottom: 1rem;
+        color: rgb(238, 234, 234);
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 647PX ========================================================================================================= */
+@media screen and (max-width:647px ) {
+    
+
+
+    header .content h1{
+        font-size: 30px;
+        /* margin-top: 3rem; */
+    }
+    
+    header .content h2{
+        font-size: 20px;
+    }
+
+
+    
+.nav-right{
+    display: none;
+    background: white;
+    width: 42vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav-right ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 0 2rem;
+}
+
+.nav-right ul a{
+    color: black;
+}
+
+.nav-right ul button{
+    align-self: center;
+    position:absolute;
+    bottom: 2rem;
+}
+
+.mobile-top{
+    overflow: hidden;
+    width: 32vw;
+    height: 5rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.logo-gray-mobile{
+    height: 100px;
+    width: 100px;
+}
+
+.cancel{
+    font-size: 2rem;
+}
+
+.nav-right-mobile{
+    display: block;
+    font-size: 2rem;
+    color: var(--color-light);
+    font-style: myFontHeavy;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-left img{
+    height: 100px;
+    height: 35px;
+}
+    
+
+/* testimonials */
+.video iframe{
+    display: none;
+    width: 90vw;
+    height: 40vh;
+    position: fixed;
+    top: 30%;
+    right: 5%;
+    z-index: 100;
+    border: 1px solid #424242;
+}
+
+.cancels{
+    font-size: 3rem;
+    top: 23%;
+    right: 3%;
+    position: fixed;
+    color: white;
+    font-family: myFontSemi;
+    cursor: pointer;
+}
+
+/*--==============WHO IS THIS KIT FOR==============-- */
+    section.who{
+        margin-bottom: 3rem;  
+    }
+    
+    
+    .who h1{
+        font-size: 24px;
+        padding-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .who .sub-heading{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width:100%;
+        margin: 0 auto;
+    }
+    .who .numbers{
+        display: none;
+    }
+    
+    .who .number{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+    
+    
+    .who .sub-heading .sub-head span{
+        display: unset;
+        background: var(--primary-color);
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 50%;
+        font-family: myFontSemi;
+        font-size: 0.6rem;
+        position: unset;
+        top: -0.9rem;
+    }
+    .who .sub-heading .sub-head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .who .sub-heading >div{
+        width: 70%;
+        margin: 0 auto;
+        text-align: unset;
+    }
+    
+    .who .sub-heading .four{
+        display: block;
+    }
+    
+    .who .sub-heading{
+        width:50% ; 
+        margin: 0 auto;
+    }
+    
+    .who .sub-heading p{
+        font-size: 16px;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    /*--------------- END OF WHO IS THIS KIT FOR-------- */
+
+    .kit-content p{
+        font-size: 16px;
+        padding: 0 1rem;
+        text-align: center;
+        
+    }
+    
+    .kit-content h2{
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 20px;
+        line-height: 1.25;
+        margin-bottom: 1.5rem;
+    }
+    
+    .internship-content p{
+        text-align: center;
+        font-size: 16px;
+        padding: 0 1rem;
+    }
+
+    .testimonial h1{
+        font-size: 20px;
+    }
+    
+    .internship-content h2{
+        font-size: 20px; 
+        line-height: 1.25;
+        padding: 0 1rem;
+        text-align: center;
+    }
+}
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 500PX ========================================================================================================= */
+@media screen and (max-width:500px ) {
+
+    
+.nav-right{
+    display: none;
+    background: white;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nav-right ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 0 1rem;
+}
+
+.nav-right ul a{
+    color: black;
+}
+
+.nav-right ul button{
+    align-self: center;
+    position:absolute;
+    bottom: 2rem;
+}
+
+.mobile-top{
+    overflow: hidden;
+    width: 44vw;
+    height: 5rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.logo-gray-mobile{
+    height: 100px;
+    width: 100px;
+}
+
+.cancel{
+    font-size: 2rem;
+}
+
+.nav-right-mobile{
+    display: block;
+    font-size: 2rem;
+    color: var(--color-light);
+    font-style: myFontHeavy;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-left img{
+    height: 100px;
+    height: 35px;
+}
+    header .content p{
+        font-size: 14px;
+        /* margin-top: 3rem; */
+    }
+    
+    header .content h2{
+        font-size: 20px;
+    }
+    
+
+    /* =========TESTIMONIAL================ */
+
+    section.testimonial{
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 7rem;
+        position: relative;
+    }
+
+    .testimonial h1{
+        font-size: 20px;
+    }
+    
+    .testifier{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 0rem;
+        padding: 1rem 0 ;
+        height: 50vh;
+    }
+    
+    
+    
+    .thumbnail span{
+        padding: 1rem 1rem;
+        transform: rotate(90deg);
+    }
+    
+    .thumbnail span i{
+        font-size: 30px;
+    } 
+    
+    .testimonial-bottom{
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    
+    .testimonial-bottom h1{
+        font-size: 26px;
+    }
+    
+    .testimonial-bottom p{
+        text-align: center;
+        color: var(--gray-color);
+        font-size: 15px;
+    }
+    
+    .descriptipn{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.1rem 0.5rem;
+        padding-left: 0rem;
+    }
+    .descriptipn h2{
+        font-size: 20px;
+        padding-left: 0.6rem;
+    }
+    
+    .descriptipn p{
+        padding: 0 0.5rem;
+        padding-left: 2rem;
+        font-size: 15px;
+    }
+    
+/*--------- END OF TESTIMONIAL------------- */
+
+/* ===============COURSES========================= */
+
+.courses h1{
+    font-size: 20px;
+}
+
+.courses h3{
+    font-size: 18px;
+}
+
+.courses p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+/*--------------- END OF COURSES---------------- */
+
+
+/* =========JOIN OUR INTERNSHIP PROGRAM========== */
+
+section.internship{
+    margin-top: -7rem;
+}
+
+.internship h1{
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+.internship h1::before{
+    width: 9rem;
+}
+
+.intern{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.intern img{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.internship-content p{
+    text-align: center;
+    font-size: 16.5px;
+    padding: 0 1.5rem;
+}
+
+.internship-content h2{
+    font-size: 20px; 
+    line-height: 1.25;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.internship-content h2::before{
+    content: "";
+    background: #ACE8FF;
+    width: 9.5rem;
+    height: 1.0rem;
+    position: absolute;
+    z-index: -1;
+    top: 2rem;
+    left: 12rem;
+}
+/*-------------- END OF INTERNSHIP--------------*/
+
+/* ===============NODEX KIT================== */
+
+section.nodex-kit{
+    margin-top: 4rem;
+}
+
+.nodex-kit h1{
+    font-size: 20px;
+    margin-bottom: 3rem;
+}
+
+.nodex-kit h1::before{
+    width: 9rem;
+}
+
+.kit{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+.kit-content p{
+    font-size: 16px;
+    padding: 0 1rem;
+    text-align: center;
+    
+}
+
+.kit-content h2{
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+}
+
+
+.kit-content h2::before{
+    content: "";
+    background: #ACE8FF;
+    width: 18rem;
+    height: 1.2rem;
+    position: absolute;
+    z-index: -1;
+    top: -0.4rem;
+
+}
+
+/*---------------- END OF NODEX KIT---------- */
+
+/* =================WHO IS THIS KIT FOR========== */
+
+
+section.who{
+    margin-bottom: 3rem;  
+}
+
+
+.who h1{
+    font-size: 24px;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.who .sub-heading{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width:100%;
+    margin: 0 auto;
+}
+.who .numbers{
+    display: none;
+}
+
+.who .number{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+
+.who .sub-heading .sub-head span{
+    display: unset;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+    font-family: myFontSemi;
+    font-size: 0.6rem;
+    position: unset;
+    top: -0.9rem;
+}
+.who .sub-heading .sub-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.who .sub-heading >div{
+    width: 70%;
+    margin: 0 auto;
+    text-align: unset;
+}
+
+.who .sub-heading .four{
+    display: block;
+}
+
+.who .sub-heading{
+    width:78% ; 
+    margin: 0 auto;
+}
+
+.who .sub-heading p{
+    font-size: 16px;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/* ===============WHAT THE KIT CONTAIN=============== */
+
+.contains h4{
+    font-size: 16px;
+}
+
+.contain {
+    font-size: 16px;
+    padding: 0 1rem;
+}
+
+.bt button{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*--------------- END OF WHAT THE KIT CONTAINS-------- */
+
+
+/* ===============WHAT OUR STUDENTS ARE SAYING=============== */
+    section.saying{
+        margin-top: 2rem; 
+    }
+    
+    .saying h1{
+        font-size: 20px;
+        margin-bottom:4rem ;
+    }
+    
+    .saying h1::before{
+        width: 9rem;
+    }
+    
+    .says{
+        display: flex;
+        row-gap: 7rem;
+        padding: 70px 0px;
+        flex-direction: column;  
+    }
+    
+    .say{
+        min-width: 0;
+        margin: 0;
+        transition: all 300ms ease;
+        max-width: 270px;
+        transition: all 200ms ease-in-out;  
+    }
+    
+    
+    .say h6{
+        font-size: 18px;
+    }
+    
+    .say p{
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .say img{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: absolute;
+        left: 33%;
+        top: -3rem;
+       
+        
+    }
+    
+    
+     .say.active{
+        transform: scale(1.25);
+        max-width: 270px;
+    }
+    
+    .saying .circle{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .saying .circle  span.active{
+        padding: 0.35rem 1rem;
+        background: var(--primary-color);
+    }
+    
+    /*----- END OF WHAT OUR STUDENTS ARE SAYING----------- */
+    
+    
+    /* =========BUILD WITH NODEX======================= */
+    section.build{
+        margin-top: 4rem;
+    }
+    
+    .build-heaading h1{
+        color: var(--secondary-color);
+        font-size: 20px;
+    }
+
+    .build-heaading h1::before{
+        width: 7rem;
+    }
+
+    
+    .builds{
+        width: 90%;
+        margin: 0 auto; 
+    }
+    
+    .building-content{
+        padding: 0 0rem;
+    }
+    
+    .building img{ 
+        width: 100%;
+        height: 220px;
+        margin-bottom: -1rem;
+    }
+    
+    
+    .building-content{
+        padding: 0 0rem;
+    }
+    
+    .building-content p{
+        margin-top: -1rem;
+        line-height: 1.3;
+        font-size: 16px;
+        padding: 0 0.3rem;
+        margin-bottom: 2rem;
+        
+    }
+    
+    .building-content h2{
+        padding: 1rem 0rem;
+        margin-top: 2rem;
+        font-size: 22px;
+    }
+    
+    .building-content h2::before{
+        width: 12rem;
+        height: 1.3rem;
+        top: 3.4rem;
+        left: 30%;
+        padding:  0 0rem;
+    
+    }
+
+    /* ======================MAP================ */
+    .map h1{
+        font-size: 20px;
+    }
+
+    .map h1::before{
+        width: 9rem;
+    }
+    /* =========FOOTER======================= */
+    
+    .foot1{
+        width: 100%;
+        row-gap: 3rem;
+    }
+
+    .foot1 .contact{
+        margin-right: 0rem;
+        width: 100%;
+    }
+
+    .email, .address, .office{
+        width: 100%;
+    }
+
+    .email p, .address p, .office p{
+        font-size: 16px;
+    }
+    .foot1 .contact p{
+        font-size: 13px;
+    }
+
+    .foot1{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        row-gap: 30px;
+        padding-top: 4rem;
+    }
+    .foot1 .email{
+        margin-right: 0rem;
+    }
+    .foot2{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .newsletter{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+        padding-right: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newsletter .inputs{
+        width: 100%;
+    }
+
+    .newsletter .socials{
+        margin-top: -1rem;
+    }
+    
+    .newsletter h1{
+        font-size: 24px;
+    }
+    .our-platform, .our-services, .about-us{
+        min-width: 100%;
+        margin-bottom: 0rem;
+    }
+
+    .our-platform p, .our-services p, .about-us p{
+        margin-bottom: 1rem;
+        color: rgb(238, 234, 234);
+        font-size: 0.8rem;
+    }
+
+    .newsletter .inputs{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+    .newsletter input{
+        width: 100%;
+        padding: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    
+    .newsletter .socials{
+        font-size: 1.5rem;
+    }
+    
+    .newsletter button{
+        background: black;
+        color: white;
+        padding: 0.8rem 2rem;
+        font-family: myFontSemi;
+        border-left: 0;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 400ms ease;
+    }
+    
+    .foot3 p{
+        font-size: 15px;
+        padding:0 2rem;
+    }
+}
+

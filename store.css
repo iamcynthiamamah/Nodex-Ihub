@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --primary-color: #00B8FF; 
+    --secondary-color: #02073E; 
+    --gray-color: #0F213799;
+    --color-dark: #161718;
+    --color-darker:#121212;
+    --color-body: #02073E;
+    --color-white: #ffffff;
+    --color-success:#07bc0c;
+    --color-warning: #f1c40f;
+    --color-error: #e74c3c;
+    --color-light: #757575;
+    --color-btn-hover: #34aadc;
+    --light-bg:#F5FCFF;
+}
+
+
+
+nav{
+    background: white;
+    box-shadow: rgb(0 0 0 / 6%) 0px 1px 2px;
+    transition: all 0.4 ease;
+}
+
+.upper-nav img{
+    width: 85px;
+    display: none;
+
+}
+
+/* .nav-right{
+    display: flex;
+    background: white;
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: rgb(0 0 0 / 76%) 0px 1px 2px;
+} */
+
+
+.mobile-top{
+    display: none;
+}
+
+.lower-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1.5rem 0rem;
+    
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+   
+    .container{ 
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .content h1{
+        margin-top:5rem;
+    }
+
+    .content button{
+        margin-top: 2rem;
+    }
+
+    .nav-right{
+        display: none;
+        background: white;
+        width: 40vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: rgb(0 0 0 / 76%) 0px 1px 2px;
+    }
+    
+    .nav-right ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 400;
+        padding: 0 2rem;
+    }
+    
+    .nav-right ul a{
+        color: black;
+    }
+    
+    .nav-right ul button{
+        align-self: center;
+        position:absolute;
+        bottom: 2rem;
+    }
+    
+    .mobile-top{
+        overflow: hidden;
+        width: 34vw;
+        height: 5rem;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    
+    .logo-gray-mobile{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .cancel{
+        font-size: 2rem;
+    }
+    
+    .nav-right-mobile{
+        display: block;
+        font-size: 2rem;
+        color: var(--color-light);
+        font-style: myFontHeavy;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .nav-left img{
+        height: 100px;
+        height: 35px;
+    }
+}
+
+
+     
+ /* 
+ .window-scroll{
+     background:white;
+ }
+ 
+ .upper-nav{
+     padding-top: 0.4rem;
+     margin: auto;
+     margin-bottom: 0.1rem;
+     display: block;
+ }
+ 
+ .upper-nav-scroll{
+     display: none;
+ }
+ 
+ .upper-nav img{
+     width: 85px;
+     display: none;
+ 
+ }
+ .upper-nav img:hover{
+     width: 86px;
+    
+ }
+ 
+ 
+ .lower-nav{
+     display: flex;
+     justify-content: space-between;
+     margin: 0 auto;
+     align-items: center;
+     padding: 1rem 0rem;
+     
+ }
+ 
+ .nav-left img{
+     height: 100px;
+     height: 55px;
+ }
+ 
+ .logo-white{
+     display: block;
+ }
+ 
+ .logo-gray{
+     display: none;
+ }
+ 
+ 
+ 
+ .nav-right ul {
+    
+     display: flex;
+     align-items: center;
+     gap: 4rem;
+     font-size: 1rem;
+     line-height: 1.2;
+     font-weight: 400;
+ }
+ 
+ .mobile-top{
+     display: none;
+ }
+ .navScroll{
+     color:var(--secondary-color);
+     
+ } */
+ 
+ nav ul a{
+    color: var(--secondary-color);
+    transition: 500ms;
+}
+
+nav ul a:hover{
+    color: var(--primary-color);
+}
+
+.header{
+    margin-top: 1rem;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50vh;
+    text-align: center;
+} 
+
+.h1{
+    color:var(--secondary-color);
+    font-family: myFontHeavy;
+}

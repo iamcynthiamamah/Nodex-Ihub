@@ -1,0 +1,655 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --primary-color: #00B8FF; 
+    --secondary-color: #02073E; 
+    --gray-color: #0F213799;
+    --color-dark: #161718;
+    --color-darker:#121212;
+    --color-body: #02073E;
+    --color-white: #ffffff;
+    --color-success:#07bc0c;
+    --color-warning: #f1c40f;
+    --color-error: #e74c3c;
+    --color-light: #757575;
+    --color-btn-hover: #34aadc;
+    --light-bg:#F5FCFF;
+}
+
+
+
+nav{
+    background: white;
+    box-shadow: rgb(0 0 0 / 6%) 0px 1px 2px;
+    transition: all 0.4 ease;
+}
+
+.upper-nav img{
+    width: 85px;
+    display: none;
+
+}
+
+
+.lower-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1.5rem 0rem;
+    
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+
+     
+ 
+ nav ul li a{
+    color: var(--secondary-color);
+    transition: 500ms;
+}
+
+nav ul a:hover{
+    color: var(--primary-color);
+}
+
+
+ .header{
+    margin-top: 7rem;
+    height: 80vh;
+    width: 100%;
+}
+.headies{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+     /* flex-flow: column wrap; */
+}  
+
+.header img{
+  
+    overflow: hidden;
+    
+}
+
+.header h1{
+    padding: 1rem;
+    padding-top: 10%;
+   /* padding-right: 7rem; */
+    font-family: myFontHeavy;
+    color: var(--primary-color);
+    font-size: 50px;
+    letter-spacing: 7px;   
+}
+
+#p{
+    font-size: 20px;
+    padding: 1rem 1rem;
+    padding-bottom: 8rem;
+    font-family: myFontSemi;
+    color: var(--secondary-color);
+}
+
+
+#hero{
+    display: none;
+}
+.buts{
+    position: relative;
+    text-align: center;
+}
+
+.cancels{
+    font-size: 3rem;
+    top: 3%;
+    right: 17%;
+    position: fixed;
+    color: white;
+    font-family: myFontSemi;
+    cursor: pointer;
+}
+ .video{
+   
+    background: #1d1c1c98;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+    display: none;
+}
+
+ iframe{
+    display: none;
+    width: 60vw;
+    height: 80vh;
+    position: fixed;
+    top: 10%;
+    right: 20%;
+    z-index: 100;
+    border: 1px solid #424242;
+    border-radius: 5px;
+}
+
+button .icons{
+    background: transparent;
+}
+
+#high{
+    color: var(--secondary-color);
+    background: transparent;
+    border: 1.5px solid var(--secondary-color);
+    border-radius: 5px;
+    position: relative;
+    padding: 1rem 4rem;
+    text-align: center;
+}
+
+#high2{
+    color: white;
+    background: var(--secondary-color);
+    position: absolute;
+    font-family: myFontSemi;
+    left: 60%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+#high2 span{
+    transform: rotate(90deg);
+    display: inline-block;
+    padding: 0.14rem 0.4rem;
+    
+}
+
+#high2 span i{
+    font-size: 0.5rem;
+}
+
+section{
+    margin-top: 8rem;
+}
+
+section h2{
+    font-size: 26px;
+    font-family: myFontHeavy;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+section .mySlides .Hacka img{
+    height: 75vh;
+    width: 70vw;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+section .mySlides  p{
+    font-family: myFontSemi;
+    width: 100%;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.butn{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+section .butn button{
+    padding: 0.8rem 5rem;
+    text-align: center;
+}
+
+/* ============================================MEDIA QUERIES */
+
+@media screen and (max-width: 900px) {
+   
+    .container{ 
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .content h1{
+        margin-top:5rem;
+    }
+
+    .content button{
+        margin-top: 2rem;
+    }
+
+    .nav-right{
+        display: none;
+        background: white;
+        width: 40vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: rgb(0 0 0 / 76%) 0px 1px 2px;
+    }
+    
+    .nav-right ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 400;
+        padding: 0 2rem;
+    }
+    
+    .nav-right ul a{
+        color: black;
+    }
+    
+    .nav-right ul button{
+        align-self: center;
+        position:absolute;
+        bottom: 2rem;
+    }
+    
+    .mobile-top{
+        overflow: hidden;
+        width: 34vw;
+        height: 5rem;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    
+    .logo-gray-mobile{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .cancel{
+        font-size: 2rem;
+    }
+    
+    .nav-right-mobile{
+        display: block;
+        font-size: 2rem;
+        color: var(--color-light);
+        font-style: myFontHeavy;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .nav-left img{
+        height: 100px;
+        height: 35px;
+    }
+
+
+    iframe{
+        display: none;
+        width: 90vw;
+        height: 60vh;
+        position: fixed;
+        top: 20%;
+        right: 5%;
+        z-index: 100;
+        border: 1px solid #424242;
+    }
+
+    .cancels{
+        font-size: 3rem;
+        top: 13%;
+        right: 3%;
+        position: fixed;
+        color: white;
+        font-family: myFontSemi;
+        cursor: pointer;
+    }
+        
+    #high{
+        color: var(--secondary-color);
+        background: transparent;
+        border: 1.5px solid var(--secondary-color);
+        border-radius: 5px;
+        position: relative;
+        padding: 1rem 4rem;
+        text-align: center;
+    }
+
+    #high2{
+        color: white;
+        background: var(--secondary-color);
+        position: absolute;
+        font-family: myFontSemi;
+        right: 13%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0.2rem 0.5rem;
+        border-radius: 50%;
+    }
+
+    #high2 span{
+        transform: rotate(90deg);
+        /* padding: 1.8rem 2rem; */
+        display: inline-block;
+        
+    }
+
+    #high2 span i{
+        font-size: 0.6rem;
+    }
+
+    #hero{
+        display: none;
+    }
+}
+
+
+
+/*##################################====== MEDIA QUERIES ====################################################################################################################################################################   */
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 1024PX ========================================================================================================= */
+@media screen and (max-width: 1024px) {
+    .container{
+        width: 85%;
+    }
+    
+    section{
+        margin-top: 0rem;
+    }
+    
+    .header{
+        margin-top: 7rem;
+        height: 60vh;
+        width: 100%;
+    }
+    #p{
+        font-size: 20px;
+        padding: 1rem 1rem;
+        padding-bottom: 4rem;
+        font-family: myFontSemi;
+        color: var(--secondary-color);
+    }
+
+    iframe{
+        display: none;
+        width: 89vw;
+        height: 70vh;
+        position: fixed;
+        top: 15%;
+        right: 6%;   
+    }
+
+    .cancels{
+        font-size: 3rem;
+        top: 8%;
+        right: 4%;
+        position: fixed;
+        color: white;
+        font-family: myFontSemi;
+        cursor: pointer;
+    }
+
+    #high2{
+        color: white;
+        background: var(--secondary-color);
+        position: absolute;
+        font-family: myFontSemi;
+        left: 66%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+
+    section .mySlides .Hacka img{
+        height: 60vh;
+        width: 90vw;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+    }
+    
+}
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 900PX ========================================================================================================= */
+@media screen and (max-width: 900px) {
+    .container{
+        width: 95%;
+    }
+
+    #p{
+        font-size: 15px;
+    }
+    .header h1{
+        padding: 1rem;
+        padding-top: 10%;
+       /* padding-right: 7rem; */
+        font-family: myFontHeavy;
+        color: var(--primary-color);
+        font-size: 34px;
+        letter-spacing: 7px;   
+    }
+
+    #high{
+        color: var(--secondary-color);
+        background: transparent;
+        border: 1.5px solid var(--secondary-color);
+        border-radius: 5px;
+        position: relative;
+        padding: 1rem 5rem;
+        text-align: center;
+    }
+    
+
+
+    #high2{
+        color: white;
+        background: var(--secondary-color);
+        position: absolute;
+        font-family: myFontSemi;
+        left: unset;
+        top: 45%;
+        right: 18%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+    
+    #high2 span{
+        transform: rotate(90deg);
+        display: inline-block;
+        padding: 0.0rem 0rem;
+        
+    }
+    
+    #high2 span i{
+        font-size: 0.4rem;
+    }
+
+   
+    
+}
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 769PX ========================================================================================================= */
+@media screen and (max-width: 767px) {
+
+    .headies{
+       
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6rem;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        margin-top: 12rem;
+         /* flex-flow: column wrap; */
+    }  
+
+
+    .header h1{
+        padding: unset;
+        padding-top: 10%;
+        padding-right: unset;
+        font-family: myFontHeavy;
+        color: var(--primary-color);
+        font-size: 32px;
+        letter-spacing: 7px; padding-right: unset; 
+    }
+
+    #her{
+        display: none;
+    }
+
+    #hero{
+        display: block;
+    }
+
+    #high2{
+        color: white;
+        background: var(--secondary-color);
+        position: absolute;
+        font-family: myFontSemi;
+        left: unset;
+        top: 45%;
+        right: 30%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+
+    section .mySlides .Hacka img{
+        height: 50vh;
+        width: 99vw;
+        margin: 0 auto;
+        margin-top: 6rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+    
+    .header img{
+        margin-bottom: 25rem;
+        overflow: hidden;
+        
+    }
+    
+}
+
+  
+
+  /* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 500PX ========================================================================================================= */
+@media screen and (max-width:500px ) {
+ 
+    .header h1{
+      
+        font-size: 27px;
+        
+    }
+
+    .headies{
+        padding: 1rem;
+        margin-top: 20rem;
+         
+    }  
+
+    #high{
+        color: var(--secondary-color);
+        background: transparent;
+        border: 1.5px solid var(--secondary-color);
+        border-radius: 5px;
+        position: relative;
+        padding: 0.6rem 1.8rem;
+        text-align: center;
+    }
+
+    #p{
+        font-size: 15px;
+        padding: 1rem 0.25rem;
+        padding-bottom: 2rem;
+        font-family: myFontSemi;
+        color: var(--secondary-color);
+    }
+
+    
+    section .mySlides .Hacka img{
+        height: 40vh;
+        width: 99vw;
+        margin: 0 auto;
+        margin-top: 6rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+    
+
+    .mySlides p{
+        font-size: 14px;
+    }
+
+    #high2{
+        color: white;
+        background: var(--secondary-color);
+        padding: 0.03rem 0.4rem;
+        position: absolute;
+        font-family: myFontSemi;
+        left: unset;
+        top: 45%;
+        right: 30%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+
+    #hid{
+        font-size: 14px !important;
+    }
+
+    #high2 span i{
+        font-size: 0.35rem;
+    }
+
+    .header img{
+        margin-bottom: 18rem;
+        overflow: hidden;
+        
+    }
+
+    section .mySlides .Hacka img{
+        height: 50vh;
+        width: 99vw;
+        margin: 0 auto;
+        margin-top: unset;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+}

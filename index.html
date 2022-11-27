@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<!---------------- MULISH FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+<!-----------------ICONSCOUT CDN  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+    
+<!-- ---------------LINKING SWIPER JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!---------------ANIMATE ON SCROLL github.com/michalsnik/aos  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    
+    <title>Nodex Ihub</title>
+</head>
+
+<body>
+<!--================================================HEADER==============================================================================  -->
+<header>
+     <!--===============HERO VIDEO===================  -->
+    <video autoplay loop class="back-video" muted plays-inline >
+        <source src="/images/HeroVideo.mp4" type="video/mp4" >
+    </video>
+    
+    <div class="color-overlay"></div>
+
+     <!--=============NAV BAR====================  -->
+    <nav>
+        <div class="upper-nav">
+            <a href="#"><img src="/images/topLogo.55926006.svg"
+                 class="logo-color"></a>  
+        </div>
+        <div class=" container lower-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo-white" ><img src="/images/logoWhite.8b1d1362.png"></a>
+                <a href="index.html" class="logo-gray" ><img src="/images/logoScroll.5afbf69d.png"></a>
+            </div>
+
+            <div class="nav-right">
+                <ul>
+                    <div class="mobile-top">
+                        <a href="#home" class="logo-gray-mobile" ><img src="/images/logoScroll.5afbf69d.png"></a>
+                        <div class="cancel"><i class="uil uil-times"></i></div>
+                    </div>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <button class="btn">REGISTER NOW</button>
+                </ul>
+            </div>
+            <div class="nav-right-mobile">
+                <i class="uil uil-bars"></i>
+            </div>
+        </div>
+    </nav>
+<!---------------------- END OF NAV BAR -------------------------------------->
+
+    <!--============HERO CONTENT======================  -->
+    <div class="container content">
+        <h1>Best Place to build a <br> <span>career</span> in tech </h1>
+        <h2>Develop your skill in</h2>
+        <p>Robotics | Embedded systems | Machine learning</p>
+        <button class="btn content"> READ ABOUT US</button>
+    </div>
+</header>
+ <!----------------------------------------------------- END OF HEADER ------------------------------------------------------>
+  
+ <!-- -----------------------TESTIMONIAL VIDEOS -->
+ <div class="video" id="vid1">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/u1ogFm32da8?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" id="videoId"   allowfullscreen></iframe>
+    <div id="cancel1" class="cancels"><i class="uil uil-times"></i></div>
+</div>
+
+<div class="video" id="vid2">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xu30w3JD0do?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" id="videoId2"   allowfullscreen></iframe>
+    <div id="cancel2" class="cancels"><i class="uil uil-times"></i></div>
+</div>
+
+<div class="video" id="vid3">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TsaDn6RUuEY?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" id="videoId3"   allowfullscreen></iframe>
+    <div id="cancel3" class="cancels"><i class="uil uil-times"></i></div>
+</div>
+
+    <!--================================================TESTIMONIALS==========================================================================  -->
+        <section class="testimonial">
+            <div class="testimonial-heading">
+                    <h1>What Our Students Say About Us
+                    </h1>
+                </div>
+                <div class=" containers swiper mySwiper">
+                    <div class="swiper-wrapper">
+                <!-- ---------------testimonial slide 1 -->
+                
+                        <div class=" swiper-slide  container testifier">
+                            <div class="test-video">
+                                <div class="thumbnail">
+                                    <img src="/images/lemuel.png" class="video-thumbnail" >
+                                    <button id="lemuel" class="icon"><span><i class="uis uis-triangle"></i></button>
+                                </div>
+                                <!-- VIDEO IS BELOW THE HEADER -->
+                            </div>
+                                
+                            <div class="descriptipn">
+                                <h2>Lemuel | Covenant University</h2>
+                                <p> <em>"I was amazed at their deliverability and performance" </em> </p>
+                            </div>
+                        </div>
+
+                        <!-- ---------------testimonial slide 2 -->
+                        <div class=" swiper-slide  container testifier">
+                            <div class="test-video">
+                                <div class="thumbnail">
+                                    <img src="/images/johnathan.png" class="video-thumbnail" >
+                                    <button id="johnatan" class="icon"><span><i class="uis uis-triangle"></i></button></div>
+                                    <!-- VIDEO IS BELOW THE HEADER-->
+                                </div>
+                                
+                            <div class="descriptipn">
+                                <h2>Jonathan | University of Port Harcourt</h2>
+                                <p> <em>"I got the opportunity to collaborate with people of like passion as mine" </em> </p>
+                            </div>
+                        </div>
+
+                        <!-- ---------------testimonial slide 3 -->
+                        <div class=" swiper-slide  container testifier">
+                            <div class="test-video">
+                                <div class="thumbnail">
+                                    <img src="/images/ikechukwu.png" class="video-thumbnail" >
+                                    <button id="ikechukwu" class="icon"><span><i class="uis uis-triangle"></i></button></div>
+                                    <!-- VIDEO IS BELOW THE HEADER -->
+                                </div>
+                                
+                            <div class="descriptipn">
+                                <h2>Ikechukwu | Federal University Of Petroleum Resources(FUPRE)</h2>
+                                <p> <em>"I am learning and building IOT based devices at Nodex Ihub " </em> </p>
+                            </div>
+                        </div>
+
+                        <!-- end of testimonial slides -->
+                    </div>
+
+                <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+
+            </div>
+                <div class="testimonial-bottom">
+                    <h1>50+</h1>
+                    <p>Students trained</p>
+                </div>
+                
+
+        </section>
+        
+ <!----------------------------------------------------- END OF TESTIMONIALS ------------------------------------------------------>
+
+
+    <!--================================================EXPLORE OUR COURSES====================================================================================  -->
+    <section id="course" class="courses container">
+            <div class=" course-heading">
+                <h1>Explore Our Courses</h1>
+            </div>
+
+        <div class="containers">
+            <div class="swiper mySwiper2">
+            <div class="swiper-wrapper course-container">
+                <div class="course swiper-slide">
+                    <div class="swiper-content">
+                            <img src="/images/course1.webp">
+                        <div class="content">
+                            <h3>Embedded c/c++ programming with AVR ATmega Microcontroller</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus deleniti quas nam? Debitis, aliquam.</p>
+                        </div>
+                        <div class="ribbon">NGN 165, 000</div>
+                    </div>
+                </div>
+
+                <div class="course swiper-slide">     
+                    <div class="swiper-content">
+                        <img src="/images/course2.webp">
+                        <div class="content">
+                            <h3>PRINTED cIRcUIT BOARD(PcB DESIgN) WITH KIcAD</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus deleniti quas nam? Debitis, aliquam.</p>
+                        </div>
+                        <div class="ribbon">NGN 120, 000</div>
+                    </div>             
+                </div>
+
+                <div class="course swiper-slide two">
+                    <div class="swiper-content">
+                            <img src="/images/course3.webp">                   
+                        <div class="content">
+                            <h3>INTERNET OF THINgS(IOT) WITH EMBEDDED c/c++ AND ESP8266</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus deleniti quas nam? Debitis, aliquam.</p>
+                        </div>
+                        <div class="ribbon">NGN 130, 000</div>
+                </div>
+                </div>
+
+                <div class="course swiper-slide">
+                    <div class="swiper-content">
+                            <img src="/images/course4.webp">
+                        <div class="content">
+                            <h3>EMBEDDED MAcHINE LEARNINg/AI</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure temporibus deleniti quas nam? Debitis, aliquam.</p>
+                        </div>
+                            <div class="ribbon">NGN 320, 000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+            
+    </div>
+</section>    
+        <!----------------------------------------------------- END OF EXPLORE OUR COURSES ------------------------------------------------------>
+
+    <!--================================================JOIN OUR INTERNSHIP PROGRAM====================================================================================  -->
+    <section id="test" class="internship">
+        <div class="intenship-heaading">
+            <h1>Join Our Internship Program</h1>
+        </div>
+        <div class="container intern">
+            <div class="img" data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="35"
+            data-aos-duration="1200">
+                <img src="/images/internship.webp">
+            </div>
+            <div class="internship-content">
+                <p>NodeX internship program is a 3 months internship program, where we select outgoing and motivated individuals to join intensive training and partake of real-life project experience giving them an opportunity to grow, explore, network and make technology significant impact.</p>
+                <h2>APPLICATION FOR NODEX INTERNSHIP PROGRAM ARE OPEN IN THE FOLLOWING FIELDS</h2>
+            </div>
+        </div>
+    </section>
+
+
+        <!----------------------------------------------------- END OF JOIN OUR INTERNSHIP ------------------------------------------------------>
+
+
+
+
+    <!--================================================NODEX KIT====================================================================================  -->
+    <section class="nodex-kit">
+        <div class="kit-heaading">
+            <h1>NodeX Student Kit</h1>
+        </div>
+        <div class="container kit">
+            <div class="img" data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="35"
+            data-aos-duration="1200">
+                <img src="/images/nodex-kit.webp">
+            </div>
+            <div class="kit-content">
+                <h2>EVERYTHING YOU NEED TO GET HANDS-ON WITH CODING AND ELECTRONICS.</h2>
+                <p>Designed around project-based learning, this kit is a practical, hands-on learning experience that helps students develop key engineering skills, and learn core aspects of Physical computing, Electronics and Embedded systems programming.</p>
+                
+            </div>
+        </div>
+    </section>
+        <!----------------------------------------------------- END OF NODEX KIT ------------------------------------------------------>
+
+   <!--================================================WHO IS THIS KIT FOR====================================================================================  -->
+   <section class="who">
+    <div class="who-heaading">
+        <h1>Who is this kit for?</h1>
+    </div>
+    <div class="container numbers">
+        <hr>
+       <div class="number">
+            <div><span class="one">1</span></div>
+            <div><span class="two">2</span></div>
+            <div><span class="three">3</span></div>
+       </div>
+    </div>
+
+    <div class=" container sub-heading">
+        <div class="sub-head">
+            <div><span class="four">1</span></div>
+            <p>
+                Secondary school student interested in coding, physical computing and technology
+            </p>
+        </div>
+        <div class="sub-head">
+            <div><span class="four">2</span></div>
+            <p>
+                Engineering or science students who wants to gain practical knowledge of course of study, interested in learning coding and project development.
+            </p>
+        </div>
+        <div class="sub-head">
+            <div><span class="four">3</span></div>
+            <p>
+                Teachers and lecturers who wants to teach physical computing, embedded software development and basic electronics design.
+            </p>
+        </div>
+    </div>
+
+</section>
+        <!----------------------------------------------------- END OF WHO IS THIS KIT FOR ------------------------------------------------------>
+        
+    <!--================================================WHAT THE KIT CONTAINS====================================================================================  -->
+    <section class="contains">
+        <div class="contain-heaading">
+            <h4>What the kit contains</h4>
+        </div>
+        <div class="container contain">
+            <p>The NodeX student kit comes with video courses and eBook<br> with sensors,  actuators and microcontroller. Other variants of <br> the student kit are available.</p>
+        </div>
+        <div class="bt"><button class="btn">BUY NOW</button></div>
+    </section>
+        <!----------------------------------------------------- END OF WHAT THE KIT CONTAINS ------------------------------------------------------>
+        
+    <!--================================================WHAT OUR STUDENTS ARE SAYING====================================================================================  -->
+    <section   class="saying">
+        <div class="saying-heaading">
+            <h1>What Our Students Are Saying</h1>
+        </div>
+        <div class="saying">
+            <div class="says">
+                <article>
+                    <div class="say one">
+                        <div>
+                            <img src="/images/godson.webp">
+                        </div>
+                        <div class="text">
+                            <p>We Talked For Weeks,I Kept Dragging My Feet, I Couldnt See The Big Picture He Was Painting. The Fact That Nodex Was Offering Me So Much More Value Than I Was Paying For, The Experience I Cannot Put Into Words, Youve Got To Experience It Yourself.</p>
+                            <h6>Godson E.</h6>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="say two active" >
+                        <div>
+                            <img class="img" src="/images/john.webp">
+                        </div>
+                        <div class="text">
+                            <p>Hi, My Name Is Paul Onoma. My Experience At NodeX IHub Was Superb I Must Say, It Was Definitely Worth It, I Got Exposed To Open Source Embedded Systems Technology And How It Can Be Used To Build Solution To Improve Our Society.</p>
+                            <h6>Paul .O.</h6>
+                        </div>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="say three">
+                        <div>
+                            <img src="/images/joy.webp">
+                        </div>
+                        <div class="text">
+                            <p>The Fact That NodeX Was Offering Me Much More Value Than I Was Paying For, The Experience I Cannot Put In Words, Youve Got To Experience It Yourself To See The Kind Of Value NodeX Gives To You. Im Glad I Took This Course, For Real!!</p>
+                            <h6>Joy D.</h6>
+                        </div>
+                    </div>
+            </article>
+
+            </div>
+
+            <div class=" circle">
+                <div class="cycle">
+                    <div><span class="one"></span></div>
+                    <div><span class="two active"></span></div>
+                    <div><span class="three"></span></div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+        <!----------------------------------------------------- END OF WHAT OUR STUDENTS ARE SAYING ------------------------------------------------------>
+
+    <!--================================================BUILD WITH NODEX====================================================================================  -->
+    <section class="build" id="project">
+        <div class="build-heaading">
+            <h1>Build With Nodex</h1>
+        </div>
+        <div class="builds">
+            <div class="building img" data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="35"
+            data-aos-duration="1200"
+            > <!--the data-aos is from the AOS animate on scroll library from github.com/michalsnik/aos-->
+                <img src="/images/build.webp">
+            </div>
+            <div class="building-content">
+                <h2>LET'S BRING YOUR EMBEDDED SYSTEMS, MACHINE
+                    LEARNING OR IOT PROJECTS IDEA TO LIFE.</h2>
+                <p>Leverage the vast industry knowledge and facility of NodeX to develop
+                    your product, school project, research project or hobbyists project.</p>  
+            </div>
+
+            <div class="bt"><button class="btn2 request">REQUEST A QUOTE</button></div>
+        </div>
+    </section>
+    
+        <!----------------------------------------------------- END OF BUILD WITH NODEX ------------------------------------------------------>
+        
+
+
+    <!--================================================MAP LOCATION====================================================================================  -->
+       <section id="mapp" class="map">
+        <div class="map-heaading">
+            <h1>Map Location</h1>
+        </div>
+        <div class="mapping">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.9794224781526!2d5.829619113962805!3d5.570059695961585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041af1e6df30fed%3A0x2be8d7cd995b96a7!2sNodeX%20iHub!5e0!3m2!1sen!2sng!4v1668888136229!5m2!1sen!2sng" width="fit-screen" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+       </section>
+    
+    <!----------------------------------------------------- END OF MAP LOCATION------------------------------------------------------>
+        
+
+
+    <!--================================================FOOTER====================================================================================  -->
+      
+    <footer>
+        <div class="foot">
+            <div class=" container foot1">
+                <div class="contact">
+                    <h2>Contact Us</h2>
+                    <a href=""><p>+234 9071085512 | +234 8146691790</p></a>
+                </div>
+                <div class="email">
+                    <h2>Email</h2>
+                    <a href=""><p>Info@nodexihub.com</p></a>
+                </div>
+                <div class="address">
+                    <h2>Address</h2>
+                    <a href="#mapp"><p>Ufuoma Street, Effurun 330102, Ugbomro, Delta State, Nigeria</p></a>
+                </div>
+                <div class="office">
+                    <h2>Office Hours</h2>
+                    <a href=""><p>Monday 10am - 4pm</p></a>
+                    <a href=""><p>Tuesday 10am - 4pm</p></a>
+                    <a href=""><p>Wednesday 10am - 4pm</p></a>
+                    <a href=""><p>Thursday 10am - 4pm</p></a>
+                    <a href=""><p>Friday 10am - 4pm</p></a>
+                    <a href=""><p>Saturday Closed</p></a>
+                    <a href=""><p>Sunday Closed</p></a>
+                </div>  
+            </div>   
+            
+
+            <div class="foots">
+                <hr>
+                <div class=" foot2">
+                    <div class="newsletter">
+                        <h1>JOIN OUR NEWSLETTER</h1>
+                        <p>Keep yourself up to date</p>
+                        <div class="inputs">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="btn3">Subscribe</button>
+                        </div>
+                        <p>Connect with us</p>
+                        <div class="socials">
+                            <i class="uil uil-facebook-f"></i>
+                            <i class="uil uil-instagram"></i>
+                            <i class="uil uil-twitter"></i>
+                            <i class="uil uil-linkedin"></i>
+                        </div>
+                    </div>
+                    <div class="our-services">
+                        <h2>OUR SERVICES</h2>
+                        <a href="#course"><p>Training</p></a>
+                        <a href="#project"><p>Project development</p></a>
+                        <a href="#test"><p>Internship Program</p></a>
+                    </div>
+                    <div class="about-us">
+                        <h2>ABOUT US</h2>
+                        <a href="about.html"><p>About Us</p></a>
+                        <a href=""><p>Privacy Policy</p></a>
+                    </div>
+                    <div class="our-platform">
+                        <h2>OUR PLATFORMS</h2>
+                        <a href="index.html"><p>Nodex iHub</p></a>
+                        <a href=""><p>Nodex Tech Security</p></a>
+                        <a href="event.html"><p>NEAR</p></a>
+                    </div>  
+                </div> 
+            </div>
+           
+
+            <div class="foot3">
+                <hr> 
+                <p>Copyright NodeX iHub | 2021 All Rights Reserved</p>
+            </div>
+
+        </div>
+    </footer>
+    
+    <!----------------------------------------------------- END OF FOOTER ------------------------------------------------------>
+        
+  
+  
+  
+<!--================================================SCRIPTS====================================================================================  -->
+    
+
+    <script src="script.js"></script>
+    <!-- swiper js script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper slides for testimonials -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          
+          
+        });
+      </script>
+
+      <!-- initialize swiper slides for courses -->
+
+    <script>
+        var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+        // el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+ 
+        breakpoints:{
+            //when window width is >= 10240px
+                1100:{
+                    slidesPerView: 3,
+                },
+                //when window width is >= 600px
+                767:{
+                    slidesPerView: 2,
+                }
+            },
+
+        });
+    </script>
+
+    <!-- ----------------------------INITIALIZE ANIMATE ON SCROLL github.com/michalsnik/aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

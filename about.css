@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --primary-color: #00B8FF; 
+    --secondary-color: #02073E; 
+    --gray-color: #0F213799;
+    --color-dark: #161718;
+    --color-darker:#121212;
+    --color-body: #02073E;
+    --color-white: #ffffff;
+    --color-success:#07bc0c;
+    --color-warning: #f1c40f;
+    --color-error: #e74c3c;
+    --color-light: #757575;
+    --color-btn-hover: #34aadc;
+    --light-bg:#F5FCFF;
+}
+
+#p2{
+    margin-top: 2rem;
+}
+
+nav{
+    background: white;
+    box-shadow: rgb(0 0 0 / 6%) 0px 1px 2px;
+    transition: all 0.4 ease;
+}
+
+.upper-nav img{
+    width: 85px;
+    display: none;
+
+}
+
+
+.lower-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1.5rem 0rem;
+    
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+   
+    .container{ 
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .content h1{
+        margin-top:5rem;
+    }
+
+    .content button{
+        margin-top: 2rem;
+    }
+
+    .nav-right{
+        display: none;
+        background: white;
+        width: 40vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: rgb(0 0 0 / 76%) 0px 1px 2px;
+    }
+    
+    .nav-right ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 400;
+        padding: 0 2rem;
+    }
+    
+    .nav-right ul a{
+        color: black;
+    }
+    
+    .nav-right ul button{
+        align-self: center;
+        position:absolute;
+        bottom: 2rem;
+    }
+    
+    .mobile-top{
+        overflow: hidden;
+        width: 34vw;
+        height: 5rem;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    
+    .logo-gray-mobile{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .cancel{
+        font-size: 2rem;
+    }
+    
+    .nav-right-mobile{
+        display: block;
+        font-size: 2rem;
+        color: var(--color-light);
+        font-style: myFontHeavy;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .nav-left img{
+        height: 100px;
+        height: 35px;
+    }
+}
+     
+ 
+ nav ul li a{
+    color: var(--secondary-color);
+    transition: 500ms;
+}
+
+nav ul a:hover{
+    color: var(--primary-color);
+}
+
+header{
+    background: url('/images/about.png')  no-repeat center center/cover;
+    padding: 0 150px;
+    height: 80vh;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding-top: 4rem;
+} 
+
+header .content h1{
+    font-size: 24px;
+    font-family: myFontHeavy;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+
+header p{
+    font-family: myFontSemi;
+    color: white;
+    font-size: 20px;
+}
+
+h1{
+
+    font-size: 24px;
+    font-family: myFontHeavy;
+    color: var(--secondary-color);
+}
+
+h2{
+    font-size: 15px;
+    font-family: myFontHeavy;
+    color: var(--secondary-color);
+    padding: 1rem 0;
+}
+
+h3{
+    font-size: 24px;
+    font-family: myFontHeavy;
+    color: var(--secondary-color);
+}
+p{
+    font-family: myFontSemi;
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+.team .pics{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.team-mates p{
+    font-size: 15px;
+}
+
+section h1{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.map{
+    margin-top: 4rem;
+}
+
+section .team-mates{
+    width: 100;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    /* align-content: center; */
+    row-gap: 4rem;
+    text-align: center;
+}
+
+section .team-mates .team >div{
+    width: 100%;
+    margin: 0 auto;
+}
+
+section .team-mates .team >div img{
+    margin: 0 auto;
+}
+
+section .team-mates .team .social{
+    display: none;
+    color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 1s ease-in-out;
+}
+
+section .team-mates .team .social .soc{
+    font-size: 1.2rem;
+    font-family: myFontHeavy;
+    width: fit-content;
+    transform: rotate(0deg);
+    display: block;
+    transition: all 0.3s ease ;
+}
+
+section .team-mates .team .social .soc i{
+    transition: all 1s ease-in-out;
+}
+
+.team-content{
+    display: block;
+    cursor: pointer;
+    padding:0 3rem;
+    position: relative;
+    transition: all 0.6s ease;
+    transition: opacity 1s ease-in-out;
+}
+
+footer h2, footer p, footer h1, footer h3{
+    color: white;
+}
+
+.rotate {
+    transition: all 0.3s ease ;
+  }
+  
+
+
+
+
+
+
+
+/*##################################====== MEDIA QUERIES ====################################################################################################################################################################   */
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 1024PX ========================================================================================================= */
+@media screen and (max-width: 1024px) {
+    .container{
+        width: 85%;
+    }
+    
+    header{
+        width: 85%;
+        padding: 0 10%;
+        padding-top: 8%;
+    }
+    
+    
+}
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 900PX ========================================================================================================= */
+@media screen and (max-width: 900px) {
+    .container{
+        width: 88%;
+    }
+    
+    header{
+        width: 88%;
+        padding: 0 8%;
+        padding-top: 2%;
+    }
+   
+}
+
+
+/* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 769PX ========================================================================================================= */
+@media screen and (max-width: 767px) {
+
+    .container{
+        width: 92%;
+    }
+    
+    header{
+        width: 100%;
+        padding: 0 5%;
+        padding-top: 10%;    
+    }
+
+    header p{
+        font-size: 15px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    h2{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    h3{
+        font-size: 24px;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-size: 15px;
+        margin-bottom: 1.5rem;
+    }
+
+    .team-mates p{
+        font-size: 14px;
+    }
+
+    .team-mates h2{
+        font-size: 14px;
+    }
+
+    .team-content{
+        padding:0 1rem;
+    }
+
+    section .team-mates{
+        width: 90%;
+        margin: 0 auto;
+        row-gap: 1rem;
+    }
+
+    .team .pics{
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+
+    section h1{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #mission{
+        margin-top: 0rem;
+    }
+
+    #vision{
+        margin-top: 0rem;
+    }
+
+    header h1{
+        text-align: left;
+    }
+    header p{
+        font-size: 15px;
+    }
+
+
+}
+
+  
+
+  /* ===============================================MEDIA QUERIES FOR TABLETS LOWER THAN 500PX ========================================================================================================= */
+@media screen and (max-width:500px ) {
+    header .content p{
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+    .container{
+        width: 91%;
+    }
+
+    section .team-mates{
+        grid-template-columns:  1fr 1fr;
+        row-gap: 3rem;
+    }
+
+
+section .team-mates .team .social{
+    display: flex;
+    color: var(--primary-color);
+    position: unset;
+    bottom: 0;
+    right: 0;
+    transition: all 1s ease-in-out;
+    margin-top: -1rem;
+}
+
+
+section .team-mates .team .social .soc{
+    width: fit-content;
+    margin: 0 auto;
+    transform: unset;
+}
+
+section .team-mates .team .social .soc i{
+    transition: all 1s ease-in-out;
+    color: var(--secondary-color);
+}
+
+.team-content{
+    display: block;
+    cursor: pointer;
+    padding:0 2rem;
+    position: relative;
+    transition: all 0.6s ease;
+    transition: opacity 1s ease-in-out;
+}
+
+#team{
+    margin-top: 5rem;
+}
+
+.map{
+    margin-top: 2rem;
+}
+
+}
